@@ -41,9 +41,10 @@ public class CodeServiceImpl implements CodeService {
                         <table align="center" border="0" cellpadding="0" cellspacing="0" width="92%" style="background-color: transparent; padding: 40px 0;">
                             <tr>
                                 <td align="center">
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+                                    <!-- 已在此处添加 border: 1px solid #e5e7eb 及 border-collapse: separate -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; border-collapse: separate; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
                                         <tr>
-                                            <td align="center" style="background-color: #0052cc; padding: 25px 0;">
+                                            <td align="center" style="background-color: #0052cc; padding: 25px 0; border-top-left-radius: 7px; border-top-right-radius: 7px;">
                                                 <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 500; letter-spacing: 1px;">注册验证</h1>
                                             </td>
                                         </tr>
@@ -72,7 +73,7 @@ public class CodeServiceImpl implements CodeService {
                     
                                         <!-- 底部版权说明 -->
                                         <tr>
-                                            <td style="background-color: #fafafa; padding: 20px 40px; border-top: 1px solid #eeeeee; text-align: center;">
+                                            <td style="background-color: #fafafa; padding: 20px 40px; border-top: 1px solid #eeeeee; text-align: center; border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;">
                                                 <p style="color: #aaaaaa; font-size: 12px; line-height: 1.5; margin: 0;">
                                                     此邮件由系统自动发送，请勿直接回复。<br>
                                                     &copy; 2026 Lidaqian.com All Rights Reserved.
