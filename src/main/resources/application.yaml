@@ -25,14 +25,14 @@ spring:
     mongodb:
       uri: ${MONGODB_URI}
   mail:
-    host: mail.ldqmail.com
+    host: smtp.email.ap-singapore-1.oci.oraclecloud.com
     port: 587
     username: ${MAIL_USERNAME}
     password: ${MAIL_PASSWORD}
     protocol: smtp
     properties:
       mail:
-        host: mail.ldqmail.com
+        host: mail.ldq.li
         smtp:
           auth: true
           starttls:

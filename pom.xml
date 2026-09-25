@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>work.daqian</groupId>
-	<artifactId>myai</artifactId>
+	<artifactId>ldq-ai-server</artifactId>
 	<version>1.0</version>
-	<name>myai</name>
+	<name>ldq-ai-server</name>
 	<packaging>jar</packaging>
 
 	<properties>

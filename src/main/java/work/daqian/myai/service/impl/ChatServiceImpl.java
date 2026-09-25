@@ -110,15 +110,15 @@ public class ChatServiceImpl implements ChatService, InitializingBean {
         String[] split = providerAndName.split(",");
         Provider provider;
         String modelName;
-        if (split.length == 2) {
+        if (userId != null && split.length == 2) {
             int value = Integer.parseInt(split[0]);
             Provider p = Provider.fromValue(value == 2 ? 1 : value);
             SecurityAssert.canAccessModel(p);
             provider = p;
             modelName = split[1];
         } else {
-            provider = Provider.OLLAMA;
-            modelName = "qwen3.5:9b";
+            provider = Provider.ALIBABA;
+            modelName = "qwen3.8-max";
         }
 
         // 构建 prompt

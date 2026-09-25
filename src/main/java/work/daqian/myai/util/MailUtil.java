@@ -28,7 +28,7 @@ public class MailUtil {
         try {
             MimeMessage mimeMessage = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, "UTF-8");
-            helper.setFrom(from, "LDQ's AI");
+            helper.setFrom("ai@ldq.li", "LDQ's AI");
             helper.setTo(to);
             helper.setSubject(title);
             MimeMultipart multipart = new MimeMultipart("alternative");
@@ -40,6 +40,9 @@ public class MailUtil {
             htmlPart.setContent(htmlContent, "text/html; charset=UTF-8");
             multipart.addBodyPart(htmlPart);
             mimeMessage.setContent(multipart);
+            mimeMessage.saveChanges(); // 先生成完整默认头
+            mimeMessage.removeHeader("MIME-Version"); // 彻底删掉带旧大小写的标头
+            mimeMessage.addHeader("MIME-Version", "1.0"); // 重新添加全大写的标头
             mailSender.send(mimeMessage);
         } catch (MessagingException | UnsupportedEncodingException e) {
             throw new BizIllegalException("邮件发送失败");

@@ -53,7 +53,7 @@ public class CodeServiceImpl implements CodeService {
                                             <td style="padding: 30px 20px 20px 20px;">
                                                 <p style="color: #333333; font-size: 16px; margin-bottom: 20px;">尊敬的用户，您好：</p>
                                                 <p style="color: #555555; font-size: 15px; line-height: 1.6; margin-bottom: 30px;">
-                                                    您正在进行 <a href="https://ai.lidaqian.com" style="text-decoration: none;">LDQ's AI</a> 账号注册。您的邮箱注册验证码为：
+                                                    您正在进行 <a href="https://ai.ldq.li" style="text-decoration: none;">LDQ's AI</a> 账号注册。您的邮箱注册验证码为：
                                                 </p>
                     
                                                 <div style="text-align: center; margin: 30px 0;">
@@ -92,7 +92,7 @@ public class CodeServiceImpl implements CodeService {
                     
                     尊敬的用户，您好：
                     
-                    您正在进行 LDQ's AI 账号注册。您的邮箱注册验证码为：705856
+                    您正在进行 LDQ's AI 账号注册。您的邮箱注册验证码为：{{VERIFY_CODE}}
                     
                     该验证码将在 5 分钟 后失效。请勿将此验证码泄露给任何人。
                     
@@ -101,7 +101,7 @@ public class CodeServiceImpl implements CodeService {
                     此邮件由系统自动发送，请勿直接回复。
                     
                     © 2026 Lidaqian.com All Rights Reserved.
-                    """;
+                    """.replace("{{VERIFY_CODE}}", code);
             mailUtil.sendSimpleMail(target, "LDQ's AI 验证码", htmlContent, textContent);
         }
         log.debug("{} 的验证码为：{}", target, code);
