@@ -53,7 +53,7 @@ public class CodeServiceImpl implements CodeService {
                                             <td style="padding: 30px 20px 20px 20px;">
                                                 <p style="color: #333333; font-size: 16px; margin-bottom: 20px;">尊敬的用户，您好：</p>
                                                 <p style="color: #555555; font-size: 15px; line-height: 1.6; margin-bottom: 30px;">
-                                                    您正在进行 <a href="https://ai.ldq.li" style="text-decoration: none;">LDQ's AI</a> 账号注册。您的邮箱注册验证码为：
+                                                    您正在进行 <a href="https://ldqai.com" style="text-decoration: none;">LDQ's AI</a> 账号注册。您的邮箱注册验证码为：
                                                 </p>
                     
                                                 <div style="text-align: center; margin: 30px 0;">
@@ -76,7 +76,7 @@ public class CodeServiceImpl implements CodeService {
                                             <td style="background-color: #fafafa; padding: 20px 40px; border-top: 1px solid #eeeeee; text-align: center; border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;">
                                                 <p style="color: #aaaaaa; font-size: 12px; line-height: 1.5; margin: 0;">
                                                     此邮件由系统自动发送，请勿直接回复。<br>
-                                                    &copy; 2026 Lidaqian.com All Rights Reserved.
+                                                    &copy; 2026 Ldqai.com All Rights Reserved.
                                                 </p>
                                             </td>
                                         </tr>
@@ -100,7 +100,7 @@ public class CodeServiceImpl implements CodeService {
                     
                     此邮件由系统自动发送，请勿直接回复。
                     
-                    © 2026 Lidaqian.com All Rights Reserved.
+                    © 2026 Ldqai.com All Rights Reserved.
                     """.replace("{{VERIFY_CODE}}", code);
             mailUtil.sendSimpleMail(target, "LDQ's AI 验证码", htmlContent, textContent);
         }

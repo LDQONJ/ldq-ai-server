@@ -32,7 +32,7 @@ spring:
     protocol: smtp
     properties:
       mail:
-        host: mail.ldq.li
+        host: mail.ldqai.com
         smtp:
           auth: true
           starttls:

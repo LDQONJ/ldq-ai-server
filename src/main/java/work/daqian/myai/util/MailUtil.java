@@ -28,7 +28,7 @@ public class MailUtil {
         try {
             MimeMessage mimeMessage = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, "UTF-8");
-            helper.setFrom("ai@ldq.li", "LDQ's AI");
+            helper.setFrom("no-reply@ldqai.com", "LDQ's AI");
             helper.setTo(to);
             helper.setSubject(title);
             MimeMultipart multipart = new MimeMultipart("alternative");
